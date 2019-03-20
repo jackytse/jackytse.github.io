@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 发布 Ionic iOS 企业级应用 · 云鹏的博客</title><meta name="description" content="发布 Ionic iOS 企业级应用 - Jacky Tse"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://www.jackytse.me/atom.xml" title="云鹏的博客"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/jackytse" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">发布 Ionic iOS 企业级应用</h1><div class="post-info">Aug 30, 2016</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00001.jpg" alt><br>Ionic 项目开发完成之后呢，自然就是打包发布了，今天说说 iOS 的打包和发布。<br>iOS 的发布方式分为三种：iOS App Store、In-House、Ad-Hoc。下面我列举了一些主要的区别：</p>
+<table>
+<thead>
+<tr>
+<th>发布类型</th>
+<th>开发者计划</th>
+<th>是否需要苹果审核</th>
+<th>发布方式</th>
+<th>支持安装设备数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iOS App Store</td>
+<td>个人、公司、教育</td>
+<td>需要</td>
+<td>发布到 iOS 应用商店</td>
+<td>无限制</td>
+</tr>
+<tr>
+<td>In-House</td>
+<td>企业开发者计划</td>
+<td>不需要</td>
+<td>发布到网站上给用户下载</td>
+<td>无限制</td>
+</tr>
+<tr>
+<td>Ad-Hoc</td>
+<td>所有</td>
+<td>不需要</td>
+<td>拷贝给用户安装</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>由于我现在只有企业开发者计划帐号，所以就说说 In-House 的发布吧<br>本文仅适用于企业开发者帐号，个人开发者帐号请略过，本文不适用</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="为项目添加-Provisioning-Profile"><a href="#为项目添加-Provisioning-Profile" class="headerlink" title="为项目添加 Provisioning Profile"></a>为项目添加 Provisioning Profile</h2><ol>
+<li><p>登录<a href="https://developer.apple.com/account/ios/certificate" target="_blank" rel="noopener">苹果开发者网站</a>，找到 Certificates, Identifiers &amp; Profiles 这个页面</p>
+</li>
+<li><p>在页面左侧列表的上边有一个下拉框，选择 “iOS，tvOS，watchOS” 选项</p>
+</li>
+<li><p>点击左侧列表中的 “App IDs” 项打开 iOS App IDs 页面，点击右边的 “+” 按钮添加一个 App ID<br>App ID Description 的 Name 字段填写 App 的名字，我一般都填的英文名<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00002.png" alt><br>App ID Suffix 选择 “Explicit App ID” 单选按钮，Bundle ID 字段填写一个全球唯一的标识，公司项目就填 “com.公司英文缩写.项目英文缩写”<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00003.png" alt><br>App Services 那里选择要启用的服务，然后点击下方的 Continue 按钮来到 Confirm your App ID 页面，确认下无误后直接点击下方 Register 按钮完成添加操作</p>
+</li>
+<li><p>点击左侧列表中 Provisioning Profiles 节点下的 Distribution 项打开 iOS Provisioning Profiles(Distribution) 页面，点击右边的 “+” 按钮添加一个 Provisioning Profile<br>在 Select Type 页面选择 Distribution 节点下的 “In House” 单选框，点击下方 Continute<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00004.png" alt><br>在 Select App ID 页面选择之前添加的 App ID，点击下方 Continute<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00005.png" alt><br>在 Select Certificates 页面选择企业开发者证书，点击下方 Continute<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00006.png" alt><br>在 Generate 页面填写 Profile Name，可以跟 App ID 的 Name 一致，点击下方 Continute<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00007.png" alt><br>Provisioning Profile 生成成功后点击 Download 按钮下载下来然后双击安装即可</p>
+</li>
+</ol>
+<h2 id="打包-Ionic-应用"><a href="#打包-Ionic-应用" class="headerlink" title="打包 Ionic 应用"></a>打包 Ionic 应用</h2><p>iOS 应用的打包很简单：</p>
+<ol>
+<li>使用 XCode 打开 Ionic 项目目录下的 “./platforms/ios/ProjectName.xcodeproj” 文件</li>
+<li>打开 XCode 菜单中的 Preferences 项，在 Accounts 选项卡中添加企业开发者帐号的 Apple ID</li>
+<li>点击 Project Navigator 中的项目文件，在中间 General 选项卡中 Identity 节点下选择 Team 下拉框中选择你的企业帐号</li>
+<li>在 XCode 左上角运行配置那里选中 “Generic iOS Device” 项</li>
+<li>在 XCode 菜单中选择 Product -&gt; Archive 即可</li>
+</ol>
+<h2 id="导出-Ionic-应用"><a href="#导出-Ionic-应用" class="headerlink" title="导出 Ionic 应用"></a>导出 Ionic 应用</h2><ol>
+<li>在 XCode 菜单中选择 Window -&gt; Organizer，在上方选项卡中选择 Archives</li>
+<li><p>在 iOS Apps 列表中选中要发布的应用，在窗口中间选中打好的包，点击窗口右边的 Export 按钮<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00008.png" alt></p>
+</li>
+<li><p>在 Select a method for export 窗口中选择 Save for Enterprise Deployment，点击 Next<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00009.png" alt></p>
+</li>
+<li><p>在 Select a Deployment Team 窗口中选择你的开发团队，点击 Choose<br><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00010.png" alt></p>
+</li>
+<li><p>在 Deveice Support 窗口选择 Export one app for all compatible devices，如果你发布的应用只针对某个设备，请选择 Export for specific device，并在下拉框中选择设备名称，然后点击 Next</p>
+</li>
+<li><p>在 Summary 窗口中直接点击 Next</p>
+</li>
+<li><p>在 Distrbution manifest infomation 窗口中随便填，能通过验证就行，后面再改</p>
+</li>
+<li><p>选择要导出的位置，点击 Export 导出</p>
+</li>
+</ol>
+<h2 id="发布-Ionic-应用"><a href="#发布-Ionic-应用" class="headerlink" title="发布 Ionic 应用"></a>发布 Ionic 应用</h2><ol>
+<li><p>将导出的 ipa 文件上传到支持 SSL 的站点并记录下 URL</p>
+</li>
+<li><p>修改导出的 plist 文件，找到 software-package 节点，把 ipa 文件的 URL 替换上去，URL 必须是以 https 开头。后面两个图片节点可以注释掉或者删掉</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>kind<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>software-package<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>url<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>https://test.duapp.com/files/app.ipa<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- &lt;dict&gt;</span></span><br><span class="line"><span class="comment">    &lt;key&gt;kind&lt;/key&gt;</span></span><br><span class="line"><span class="comment">    &lt;string&gt;display-image&lt;/string&gt;</span></span><br><span class="line"><span class="comment">    &lt;key&gt;url&lt;/key&gt;</span></span><br><span class="line"><span class="comment">    &lt;string&gt;https://localhost/app.png&lt;/string&gt;</span></span><br><span class="line"><span class="comment">  &lt;/dict&gt;</span></span><br><span class="line"><span class="comment">  &lt;dict&gt;</span></span><br><span class="line"><span class="comment">    &lt;key&gt;kind&lt;/key&gt;</span></span><br><span class="line"><span class="comment">    &lt;string&gt;full-size-image&lt;/string&gt;</span></span><br><span class="line"><span class="comment">    &lt;key&gt;url&lt;/key&gt;</span></span><br><span class="line"><span class="comment">    &lt;string&gt;https://localhost/app.jpg&lt;/string&gt;</span></span><br><span class="line"><span class="comment">  &lt;/dict&gt; --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把 plist 文件也上传到支持 SSL 的站点并记录下 URL</p>
+</li>
+<li><p>制作 app 下载页面，将下载链接指向 plist 文件的 URL 即可。下载链接的示例如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"itms-services://?action=download-manifest&amp;url=https://test.duapp.com/files/manifest.plist"</span>&gt;</span>下载App<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将 app 下载页面发布到公司网站，在手机中打开站点测试能否成功下载</p>
+<blockquote>
+<p>由于苹果要求 iOS 企业应用发布的站点必须要有 SSL 证书，由于公司的网站不具备条件，所已我将 ipa 文件和 plist 文件上传到了百度云的 BOS 上面</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>如有疑问，请在文章下方留言，我在收到留言后会及时答复您</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/using-signaturepad-in-ionic2/" class="prev">PREV</a><a href="/2016/start-using-ionic/" class="next">NEXT</a></div><div id="SOHUCS" sid="2016/publish-ionic-ios-enterprise-deployment/" style="padding:0 10px;width:auto;"></div><script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script><script type="text/javascript">window.changyan.api.config({appid: "cyssdmXPE", conf: "prod_a5547932ad75f872719847b1a409c2fb"});</script><div class="copyright"><p>© 2016 - 2019 <a href="http://www.jackytse.me">Jacky Tse</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p><p><a href="http://www.miit.gov.cn" target="_blank">粤ICP备17051421号</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 云鹏的博客</title><meta name="description" content="A Blog Powered By Hexo"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://www.jackytse.me/atom.xml" title="云鹏的博客"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link active">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/jackytse" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><ul class="home post-list"><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2017/angular-development-environment-setup/" class="post-title-link">Angular 开发环境搭建</a></h2><div class="post-info">Jun 22, 2017</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/angular-development-environment-setup/angular-development-environment-setup-00001.jpg" alt></p>
+<p>Angular 是一款开源 JavaScript 框架，由Google 维护，用来协助单一页面应用程序运行的。它的目标是增强基于浏览器的应用，使开发和测试变得更加容易。目前最新的 Angular 版本是 <code>v4.2.3</code></p>
+<h2 id="开始搭建-Angular-开发环境"><a href="#开始搭建-Angular-开发环境" class="headerlink" title="开始搭建 Angular 开发环境"></a>开始搭建 Angular 开发环境</h2><p>搭建 Angular 开发环境需要的步骤：</p>
+<ul>
+<li>Node.js</li>
+<li>配置 npm</li>
+<li>Angular CLI</li>
+</ul></div><a href="/2017/angular-development-environment-setup/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2017/publish-ionic-android/" class="post-title-link">发布 Ionic Android 应用</a></h2><div class="post-info">Jun 12, 2017</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-android/publish-ionic-android-00001.jpg" alt><br>之前介绍了 iOS 应用的打包和发布，这次说说 Android 应用的打包和发布。</p>
+<p>Android 应用的打包和发布相比较 iOS 就要简单很多了，也不需要注册什么开发者账号。</p></div><a href="/2017/publish-ionic-android/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2017/migrate-to-ionic3/" class="post-title-link">升级到 Ionic 3</a></h2><div class="post-info">May 3, 2017</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/migrate-to-ionic3/migrate-to-ionic3-00001.jpg" alt></p>
+<p>Ionic 3 正式发布已经近一个月了，很多朋友惊呼 Ionic 2 还没上手 Ionic 3 又发布了，会不会又要花很大精力去学习等。认真研究了下，我发现 Ionic 2 到 Ionic 3 的升级只是一些类库的升级，并不需要像 Ionic 1 到 Ionic 2 那样完全重写代码。下面就花点时间给大家介绍下 Ionic 3 的特性以及如何从 Ionic 2 升级到 Ionic 3。</p>
+<h2 id="Ionic-3-的新特性"><a href="#Ionic-3-的新特性" class="headerlink" title="Ionic 3 的新特性"></a>Ionic 3 的新特性</h2><blockquote>
+<p>关于 Ionic 3 的详细说明可以参考<a href="http://blog.ionic.io/ionic-3-0-has-arrived/" target="_blank" rel="noopener">官方博客</a></p>
+</blockquote>
+<h4 id="0-Angular-4"><a href="#0-Angular-4" class="headerlink" title="#0 Angular 4"></a>#0 Angular 4</h4><p>Angular 4 是在3月底发布的。Angular 4 这次更新大致如下：改进 AOT 编译器，分离 animations 包，缩小生成后的代码量，改进 <code>*ngIf</code> 和 <code>*ngFor</code> 等。详细介绍请参<a href="http://angularjs.blogspot.jp/2017/03/angular-400-now-available.html" target="_blank" rel="noopener">这篇文章</a>。</p></div><a href="/2017/migrate-to-ionic3/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2017/using-signaturepad-in-ionic2/" class="post-title-link">Ionic 2 集成签名板</a></h2><div class="post-info">Apr 24, 2017</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/using-signaturepad-in-ionic2/using-signaturepad-in-ionic2-00001.png" alt></p>
+<p>之前做的一个项目中有一个需求，要让用户在手机上签名并保留笔迹。我的第一反应是，这个用 js 应该能够实现，于是 Google 之，还真让我找到了<a href="https://github.com/szimek/signature_pad" target="_blank" rel="noopener">signature_pad</a>；更加让人高兴的是，Github 上有位老兄把它封装成了 Angular Module <a href="https://github.com/wulfsolter/angular2-signaturepad" target="_blank" rel="noopener">angular2-signaturepad</a>，看来是不用重复造轮子了。</p></div><a href="/2017/using-signaturepad-in-ionic2/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/publish-ionic-ios-enterprise-deployment/" class="post-title-link">发布 Ionic iOS 企业级应用</a></h2><div class="post-info">Aug 30, 2016</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/publish-ionic-ios-enterprise-deployment/publish-ionic-ios-enterprise-deployment-00001.jpg" alt><br>Ionic 项目开发完成之后呢，自然就是打包发布了，今天说说 iOS 的打包和发布。<br>iOS 的发布方式分为三种：iOS App Store、In-House、Ad-Hoc。下面我列举了一些主要的区别：</p>
+<table>
+<thead>
+<tr>
+<th>发布类型</th>
+<th>开发者计划</th>
+<th>是否需要苹果审核</th>
+<th>发布方式</th>
+<th>支持安装设备数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iOS App Store</td>
+<td>个人、公司、教育</td>
+<td>需要</td>
+<td>发布到 iOS 应用商店</td>
+<td>无限制</td>
+</tr>
+<tr>
+<td>In-House</td>
+<td>企业开发者计划</td>
+<td>不需要</td>
+<td>发布到网站上给用户下载</td>
+<td>无限制</td>
+</tr>
+<tr>
+<td>Ad-Hoc</td>
+<td>所有</td>
+<td>不需要</td>
+<td>拷贝给用户安装</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>由于我现在只有企业开发者计划帐号，所以就说说 In-House 的发布吧<br>本文仅适用于企业开发者帐号，个人开发者帐号请略过，本文不适用</p>
+</blockquote></div><a href="/2016/publish-ionic-ios-enterprise-deployment/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/start-using-ionic/" class="post-title-link">使用 Ionic 编写移动应用</a></h2><div class="post-info">Jul 18, 2016</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/start-using-ionic/start-using-ionic-00001.jpg" alt><br>Ionic 这个框架包含了一套精美的相应式 UI 组件、一套基于 AngularJS 的 Javascript 类库，以及一套强大的 CLI 工具。之前介绍了如何搭建 Ionic 的开发环境，下面就来正式创建一个应用吧。</p>
+<h2 id="创建-Ionic-项目"><a href="#创建-Ionic-项目" class="headerlink" title="创建 Ionic 项目"></a>创建 Ionic 项目</h2><p>创建 “ionic start” 命令，template 是创建项目使用的模板，目前官方提供了三个模板：</p>
+<ul>
+<li>tabs（选项卡菜单，默认）</li>
+<li>blank（空模板）</li>
+<li>slidemenu（侧滑菜单）</li>
+</ul></div><a href="/2016/start-using-ionic/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/ionic-development-environment-setup-macosx/" class="post-title-link">Ionic 开发环境搭建（macOS）</a></h2><div class="post-info">Jul 9, 2016</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/ionic-development-environment-setup-macosx/ionic-dev-env-setup-macosx-00001.jpg" alt><br>在上一篇文章中介绍了 <a href="https://www.jackytse.me/2016/ionic-development-environment-setup-windows/">Windows 下 Ionic 开发环境的搭建</a>，这篇文章主要介绍 macOS 下 Ionic 环境搭建</p>
+<h2 id="开始安装-Ionic"><a href="#开始安装-Ionic" class="headerlink" title="开始安装 Ionic"></a>开始安装 Ionic</h2><p>Ionic 的开发环境需要安装的组件：</p>
+<ul>
+<li>Node.js</li>
+<li>Cordova &amp; Ionic CLI</li>
+<li>Java SDK</li>
+<li>Android SDK</li>
+</ul></div><a href="/2016/ionic-development-environment-setup-macosx/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/getting-started-aspnet-core-macos/" class="post-title-link">macOS 下 ASP.NET Core 初体验</a></h2><div class="post-info">Jul 1, 2016</div><div class="post-content"><p><img src="http://jackytse-me.gz.bcebos.com/getting-started-aspnet-core-macos/getting-started-aspnet-core-macos-00001.png" alt><br>2016年6月28日微软在 RedHat 峰会上发布了 .NET Core 1.0、ASP.NET Core 1.0 和 Entity Framework Core 1.0。Net Core 是 .Net 基金会推出的新一代 .Net 平台，能支持 Windows、macOS 和 Linux 平台。Windows 平台下使用 Visual Studio 2015 就可以创建和打开 ASP.NET Core 项目了，今天试试在 macOS 下体验 ASP.NET Core</p>
+<h2 id="安装-Net-Core-SDK"><a href="#安装-Net-Core-SDK" class="headerlink" title="安装 .Net Core SDK"></a>安装 .Net Core SDK</h2><p>.Net Core SDK 要求 macOS 必须是10.11 (El Capitan) 或者更高版本，幸好我一直都是用最新的系统</p>
+<p>安装 .Net Core SDK 之前要先通过 <a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a> 安装 OpenSSL<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew update</span><br><span class="line">$ brew install openssl</span><br><span class="line">$ brew link --force openssl</span><br></pre></td></tr></table></figure></p></div><a href="/2016/getting-started-aspnet-core-macos/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/ionic-development-environment-setup-windows/" class="post-title-link">Ionic 开发环境搭建（Windows）</a></h2><div class="post-info">Jun 23, 2016</div><div class="post-content"><h2 id="Ionic-概述"><a href="#Ionic-概述" class="headerlink" title="Ionic 概述"></a>Ionic 概述</h2><p>Ionic 官网：<a href="http://www.ionicframework.com/" target="_blank" rel="noopener">http://www.ionicframework.com/</a><br>Ionic 是一个强大的 HTML5 SDK，它使用 HTML、CSS、Javascript 等 web 技术帮助你快速构建原生风格的移动应用<br>Ionic 目前能支持 iOS 和 Android </p>
+<h2 id="与-Cordova-的关系"><a href="#与-Cordova-的关系" class="headerlink" title="与 Cordova 的关系"></a>与 Cordova 的关系</h2><p>Ionic 是基于 Cordova 的，在 Cordova 上能用的一切同样可以在 Ionic 上使用<br>Ionic 在 Cordova 基础上增加了 Ionic UI、AngularJS、一个强大的 CLI 工具和一些云端服务等</p></div><a href="/2016/ionic-development-environment-setup-windows/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/sublime-text-setup/" class="post-title-link">Sublime Text 基本配置</a></h2><div class="post-info">May 18, 2016</div><div class="post-content"><h2 id="Sublime-Text-概述"><a href="#Sublime-Text-概述" class="headerlink" title="Sublime Text 概述"></a>Sublime Text 概述</h2><p>Sublime Text 是一款非常优秀的编辑工具，而且可以跨平台使用<br>现在 Sublime Text 是我主要使用的编辑工具<br>下面介绍一些基本配置： </p>
+<h2 id="安装-Sublime-Text-3"><a href="#安装-Sublime-Text-3" class="headerlink" title="安装 Sublime Text 3"></a>安装 Sublime Text 3</h2><p>官网：<a href="http://www.sublimetext.com" target="_blank" rel="noopener">http://www.sublimetext.com</a><br>前往下载最新版本的 Sublime Text 安装</p></div><a href="/2016/sublime-text-setup/" class="read-more">...more</a></article></li></ul></main><footer><div class="paginator"></div><div class="copyright"><p>© 2016 - 2019 <a href="http://www.jackytse.me">Jacky Tse</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p><p><a href="http://www.miit.gov.cn" target="_blank">粤ICP备17051421号</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>

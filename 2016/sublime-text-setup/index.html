@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Sublime Text 基本配置 · 云鹏的博客</title><meta name="description" content="Sublime Text 基本配置 - Jacky Tse"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://www.jackytse.me/atom.xml" title="云鹏的博客"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/jackytse" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Sublime Text 基本配置</h1><div class="post-info">May 18, 2016</div><div class="post-content"><h2 id="Sublime-Text-概述"><a href="#Sublime-Text-概述" class="headerlink" title="Sublime Text 概述"></a>Sublime Text 概述</h2><p>Sublime Text 是一款非常优秀的编辑工具，而且可以跨平台使用<br>现在 Sublime Text 是我主要使用的编辑工具<br>下面介绍一些基本配置： </p>
+<h2 id="安装-Sublime-Text-3"><a href="#安装-Sublime-Text-3" class="headerlink" title="安装 Sublime Text 3"></a>安装 Sublime Text 3</h2><p>官网：<a href="http://www.sublimetext.com" target="_blank" rel="noopener">http://www.sublimetext.com</a><br>前往下载最新版本的 Sublime Text 安装</p>
+<a id="more"></a>
+<h3 id="设置系统环境变量"><a href="#设置系统环境变量" class="headerlink" title="设置系统环境变量"></a>设置系统环境变量</h3><p>安装好之后要设置系统环境变量，以便我们能从终端里直接打开 Sublime Text</p>
+<h4 id="MAC-OS-X-下设置环境变量"><a href="#MAC-OS-X-下设置环境变量" class="headerlink" title="MAC OS X 下设置环境变量"></a>MAC OS X 下设置环境变量</h4><p>打开终端，使用 vim 打开 ~/.bash_profile 文件<br>在末尾添加 alias subl=’open -a /Applications/Sublime\ Text.app’，然后保存<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<h4 id="Windows-下设置环境变量"><a href="#Windows-下设置环境变量" class="headerlink" title="Windows 下设置环境变量"></a>Windows 下设置环境变量</h4><p>打开系统属性，在“高级”选项卡中找到环境变量，单击打开“环境变量”设置窗口<br>在“系统变量”列表中找到“Path”变量，双击打开“编辑系统变量”窗口<br>将 Sublime Text 的安装路径添加至“变量值”末尾并保存<br><img src="http://jackytse-me.gz.bcebos.com/sublime-text-setup/sublime-text-setup-00001.png" alt></p>
+<p>打开终端，使用如下命令打开 Sublime Text 并在 Sublime Text 中打开当前目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ subl .</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装常用插件"><a href="#安装常用插件" class="headerlink" title="安装常用插件"></a>安装常用插件</h2><p>Sublime Text 提供了非常强大的插件功能来扩展我们的编辑器</p>
+<h5 id="安装-Package-Control"><a href="#安装-Package-Control" class="headerlink" title="安装 Package Control"></a>安装 Package Control</h5><p>同时按下 Ctrl+· 打开 Sublime Console<br>在 Console 中输入以下代码并按回车键，然后等待安装完成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = &apos;2915d1851351e5ee549c20394736b442&apos; + &apos;8bc59f460fa1548d1514676163dafc88&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参考：<a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">https://packagecontrol.io/installation</a></p>
+</blockquote>
+<h5 id="使用-Package-Control-安装插件"><a href="#使用-Package-Control-安装插件" class="headerlink" title="使用 Package Control 安装插件"></a>使用 Package Control 安装插件</h5><p>同时按下 Command+Shift+P(OSX) 或者 Ctrl+Shift+P(Windows) 呼出Package Control 命令窗口<br>输入“pci”并按下 Enter 键<br><img src="http://jackytse-me.gz.bcebos.com/sublime-text-setup/sublime-text-setup-00002.png" alt></p>
+<p>在弹出的插件搜索窗口中输入插件名字，然后会自动在下面的列表中显示找到的相关插件<br>选择要安装的插件，按下 Enter 键，然后你要做的就是等待安装完成</p>
+<h5 id="推荐安装插件"><a href="#推荐安装插件" class="headerlink" title="推荐安装插件"></a>推荐安装插件</h5><table>
+<thead>
+<tr>
+<th>插件名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emmet</td>
+<td>它使用仿CSS选择器的语法来生成代码，大大提高了 HTML/CSS 代码编写的速度</td>
+</tr>
+<tr>
+<td>jsFormat</td>
+<td>它能快速格式化 js 代码</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td>微软官方的 TypeScript 代码插件,提供了代码提示、编译等功能</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Sublime Text 是一款功能非常强大的编辑器，相信使用过之后你一定会和我一样爱上它的</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/ionic-development-environment-setup-windows/" class="prev">PREV</a></div><div id="SOHUCS" sid="2016/sublime-text-setup/" style="padding:0 10px;width:auto;"></div><script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script><script type="text/javascript">window.changyan.api.config({appid: "cyssdmXPE", conf: "prod_a5547932ad75f872719847b1a409c2fb"});</script><div class="copyright"><p>© 2016 - 2019 <a href="http://www.jackytse.me">Jacky Tse</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p><p><a href="http://www.miit.gov.cn" target="_blank">粤ICP备17051421号</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>
